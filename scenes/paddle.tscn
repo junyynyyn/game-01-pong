@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3fkyahs3kn26"]
 
-[ext_resource type="Script" path="res://scenes/paddle.gd" id="1_jy5pf"]
+[ext_resource type="Script" path="res://scripts/paddle.gd" id="1_s760r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s8umw"]
 friction = 0.0
@@ -11,7 +11,7 @@ size = Vector2(20, 200)
 
 [node name="Paddle" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_s8umw")
-script = ExtResource("1_jy5pf")
+script = ExtResource("1_s760r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_246d5")

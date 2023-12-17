@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://5i2al0suav03"]
+
+[node name="Divider" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D18" type="Polygon2D" parent="."]
+position = Vector2(0, 320)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D17" type="Polygon2D" parent="."]
+position = Vector2(0, 280)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D16" type="Polygon2D" parent="."]
+position = Vector2(0, 240)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D15" type="Polygon2D" parent="."]
+position = Vector2(0, 200)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D14" type="Polygon2D" parent="."]
+position = Vector2(0, 160)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D13" type="Polygon2D" parent="."]
+position = Vector2(0, 120)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D12" type="Polygon2D" parent="."]
+position = Vector2(0, 80)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D11" type="Polygon2D" parent="."]
+position = Vector2(0, 40)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D10" type="Polygon2D" parent="."]
+position = Vector2(0, -320)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D8" type="Polygon2D" parent="."]
+position = Vector2(0, -240)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D9" type="Polygon2D" parent="."]
+position = Vector2(0, -280)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D6" type="Polygon2D" parent="."]
+position = Vector2(0, -160)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D7" type="Polygon2D" parent="."]
+position = Vector2(0, -200)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D5" type="Polygon2D" parent="."]
+position = Vector2(0, -120)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D4" type="Polygon2D" parent="."]
+position = Vector2(0, -80)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(0, -40)
+polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
