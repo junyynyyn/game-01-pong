@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://6rocf5a0r6s"]
+[gd_scene load_steps=8 format=3 uid="uid://6rocf5a0r6s"]
 
 [ext_resource type="PackedScene" uid="uid://crlhxslsascq7" path="res://scenes/wall.tscn" id="1_e58aj"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_xih7j"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovo2s"]
 size = Vector2(70, 664)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8amox"]
+font_size = 70
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_xih7j")
@@ -54,6 +57,29 @@ player = true
 [node name="Paddle2" parent="." instance=ExtResource("3_c08c3")]
 position = Vector2(1260, 360)
 player = true
+playernum = 1
+
+[node name="P1Score" type="Label" parent="."]
+offset_left = 548.0
+offset_top = 30.0
+offset_right = 630.0
+offset_bottom = 126.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_8amox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2Score" type="Label" parent="."]
+offset_left = 650.0
+offset_top = 30.0
+offset_right = 732.0
+offset_bottom = 126.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_8amox")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Arena/P1Goal" to="." method="_on_p_1_goal_body_entered"]
 [connection signal="body_entered" from="Arena/P2Goal" to="." method="_on_p_2_goal_body_entered"]
