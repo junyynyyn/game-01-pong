@@ -26,3 +26,10 @@ func _process(delta):
 			if (Input.is_action_pressed("down2")):
 				if (position.y  <= get_viewport().size.y - SIZE - 20):
 					position.y += MOVE_SPEED * delta
+	else:
+		if (Globals.ballPosition.y < position.y):
+			if (position.y >= SIZE + 20):
+					position.y -= MOVE_SPEED * delta
+		elif (Globals.ballPosition.y > position.y):
+			if (position.y  <= get_viewport().size.y - SIZE - 20):
+					position.y += MOVE_SPEED * delta

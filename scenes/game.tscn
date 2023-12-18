@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://6rocf5a0r6s"]
+[gd_scene load_steps=10 format=3 uid="uid://6rocf5a0r6s"]
 
 [ext_resource type="PackedScene" uid="uid://crlhxslsascq7" path="res://scenes/wall.tscn" id="1_e58aj"]
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_xih7j"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_xih7j"]
 [ext_resource type="PackedScene" uid="uid://letk0tslkh2j" path="res://scenes/ball.tscn" id="2_rwkm0"]
 [ext_resource type="PackedScene" uid="uid://c3fkyahs3kn26" path="res://scenes/paddle.tscn" id="3_c08c3"]
 [ext_resource type="PackedScene" uid="uid://5i2al0suav03" path="res://scenes/divider.tscn" id="4_wc5vx"]
@@ -11,6 +11,12 @@ size = Vector2(70, 664)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8amox"]
 font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj0s1"]
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrwak"]
+font_size = 60
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_xih7j")
@@ -56,7 +62,6 @@ player = true
 
 [node name="Paddle2" parent="." instance=ExtResource("3_c08c3")]
 position = Vector2(1260, 360)
-player = true
 playernum = 1
 
 [node name="P1Score" type="Label" parent="."]
@@ -81,5 +86,66 @@ label_settings = SubResource("LabelSettings_8amox")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="StartMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1279.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="StartMenu"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 133.0
+offset_right = 526.0
+offset_bottom = 255.0
+text = "PONG"
+label_settings = SubResource("LabelSettings_aj0s1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="StartMenu"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 276.0
+offset_right = 325.0
+offset_bottom = 307.0
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="StartMenu"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 342.0
+offset_right = 322.0
+offset_bottom = 373.0
+text = "Quit Game
+"
+
+[node name="EndMenu" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 714.0
+
+[node name="Label" type="Label" parent="EndMenu"]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 145.0
+offset_right = 1138.0
+offset_bottom = 241.0
+text = "Player 1 Wins!"
+label_settings = SubResource("LabelSettings_rrwak")
+
+[node name="Button" type="Button" parent="EndMenu"]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 259.0
+offset_right = 868.0
+offset_bottom = 298.0
+text = "Play Again?"
+
 [connection signal="body_entered" from="Arena/P1Goal" to="." method="_on_p_1_goal_body_entered"]
 [connection signal="body_entered" from="Arena/P2Goal" to="." method="_on_p_2_goal_body_entered"]
+[connection signal="pressed" from="StartMenu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartMenu/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="EndMenu/Button" to="." method="_on_button_pressed"]
